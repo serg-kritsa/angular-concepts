@@ -7,6 +7,8 @@ import { ServersComponent } from './servers/servers.component';
 import { TemplateComponent } from './demo/template/template.component';
 import { StylesComponent } from './demo/styles/styles.component';
 import { OneFileComponent } from './demo/one-file/one-file.component';
+import { SelectorAttributeComponent } from './demo/selector-attribute/selector-attribute.component';
+import { SelectorClassComponent } from './demo/selector-class/selector-class.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { OneFileComponent } from './demo/one-file/one-file.component';
     ServersComponent,
     TemplateComponent,
     StylesComponent,
-    OneFileComponent
+    OneFileComponent,
+    SelectorAttributeComponent,
+    SelectorClassComponent
   ],
   imports: [
     BrowserModule,
