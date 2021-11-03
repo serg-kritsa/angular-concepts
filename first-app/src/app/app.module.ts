@@ -28,6 +28,7 @@ import { InnerComponent } from './demo-v2/view-encapsulation/inner/inner.compone
 import { TemplateLocalRefComponent } from './demo-v2/template-local-ref/template-local-ref.component';
 import { DirectivesNgcontentComponent } from './demo-v2/directives-ngcontent/directives-ngcontent.component';
 import { InnerDirectivesNgcontentComponent } from './demo-v2/directives-ngcontent/inner/inner.component';
+import { DirectivesNgswitchComponent } from './demo-v2/directives-ngswitch/directives-ngswitch.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,7 @@ import { InnerDirectivesNgcontentComponent } from './demo-v2/directives-ngconten
     DirectivesOutputComponent, InnerDirectivesOutputComponent, InnerEmittedAliasEventComponent, 
     ViewEncapsulationComponent, InnerComponent, 
     TemplateLocalRefComponent, 
-    DirectivesNgcontentComponent, InnerDirectivesNgcontentComponent
+    DirectivesNgcontentComponent, InnerDirectivesNgcontentComponent, DirectivesNgswitchComponent
   ],
   imports: [
     BrowserModule,
