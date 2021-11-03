@@ -17,6 +17,7 @@ import { DirectivesNgifComponent } from './demo/directives-ngif/directives-ngif.
 import { DirectivesNgifElseComponent } from './demo/directives-ngif-else/directives-ngif-else.component';
 import { DirectivesNgstyleComponent } from './demo/directives-ngstyle/directives-ngstyle.component';
 import { DirectivesNgclassComponent } from './demo/directives-ngclass/directives-ngclass.component';
+import { DirectivesNgforComponent } from './demo/directives-ngfor/directives-ngfor.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { DirectivesNgclassComponent } from './demo/directives-ngclass/directives
     DirectivesNgifComponent,
     DirectivesNgifElseComponent,
     DirectivesNgstyleComponent,
-    DirectivesNgclassComponent
+    DirectivesNgclassComponent,
+    DirectivesNgforComponent
   ],
   imports: [
     BrowserModule,
