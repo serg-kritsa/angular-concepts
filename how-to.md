@@ -3,3 +3,4 @@
 
 ## generate component via CLI
 `ng g c component-name`
+`ng g c component-name --spec false`
