@@ -15,6 +15,8 @@ import { EventBindingComponent } from './demo/event-binding/event-binding.compon
 import { EventBindingV2Component } from './demo/event-binding-v2/event-binding-v2.component';
 import { DirectivesNgifComponent } from './demo/directives-ngif/directives-ngif.component';
 import { DirectivesNgifElseComponent } from './demo/directives-ngif-else/directives-ngif-else.component';
+import { DirectivesNgstyleComponent } from './demo/directives-ngstyle/directives-ngstyle.component';
+import { DirectivesNgclassComponent } from './demo/directives-ngclass/directives-ngclass.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { DirectivesNgifElseComponent } from './demo/directives-ngif-else/directi
     EventBindingComponent,
     EventBindingV2Component,
     DirectivesNgifComponent,
-    DirectivesNgifElseComponent
+    DirectivesNgifElseComponent,
+    DirectivesNgstyleComponent,
+    DirectivesNgclassComponent
   ],
   imports: [
     BrowserModule,
