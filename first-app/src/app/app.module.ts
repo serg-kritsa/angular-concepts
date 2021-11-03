@@ -23,6 +23,8 @@ import { InnerAcceptsAliasPropComponent } from './demo-v2/directives-input/inner
 import { DirectivesOutputComponent }     from './demo-v2/directives-output/directives-output.component';
 import { InnerDirectivesOutputComponent } from './demo-v2/directives-output/inner/inner.component';
 import { InnerEmittedAliasEventComponent } from './demo-v2/directives-output/inner/inner-emitted-alias-event.component';
+import { ViewEncapsulationComponent } from './demo-v2/view-encapsulation/view-encapsulation.component';
+import { InnerComponent } from './demo-v2/view-encapsulation/inner/inner.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +44,7 @@ import { InnerEmittedAliasEventComponent } from './demo-v2/directives-output/inn
     DirectivesNgclassComponent,
     DirectivesNgforComponent,
     DirectivesInputComponent, InnerDirectivesInputComponent, InnerAcceptsAliasPropComponent, 
-    DirectivesOutputComponent, InnerDirectivesOutputComponent, InnerEmittedAliasEventComponent
+    DirectivesOutputComponent, InnerDirectivesOutputComponent, InnerEmittedAliasEventComponent, ViewEncapsulationComponent, InnerComponent
   ],
   imports: [
     BrowserModule,
