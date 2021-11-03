@@ -20,6 +20,9 @@ import { DirectivesNgforComponent } from './demo/directives-ngfor/directives-ngf
 import { DirectivesInputComponent }     from './demo-v2/directives-input/directives-input.component';
 import { InnerDirectivesInputComponent } from './demo-v2/directives-input/inner/inner.component';
 import { InnerAcceptsAliasPropComponent } from './demo-v2/directives-input/inner/inner-accepts-alias-prop.component';
+import { DirectivesOutputComponent }     from './demo-v2/directives-output/directives-output.component';
+import { InnerDirectivesOutputComponent } from './demo-v2/directives-output/inner/inner.component';
+import { InnerEmittedAliasEventComponent } from './demo-v2/directives-output/inner/inner-emitted-alias-event.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +41,8 @@ import { InnerAcceptsAliasPropComponent } from './demo-v2/directives-input/inner
     DirectivesNgstyleComponent,
     DirectivesNgclassComponent,
     DirectivesNgforComponent,
-    DirectivesInputComponent, InnerDirectivesInputComponent, InnerAcceptsAliasPropComponent
+    DirectivesInputComponent, InnerDirectivesInputComponent, InnerAcceptsAliasPropComponent, 
+    DirectivesOutputComponent, InnerDirectivesOutputComponent, InnerEmittedAliasEventComponent
   ],
   imports: [
     BrowserModule,
