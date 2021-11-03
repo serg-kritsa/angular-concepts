@@ -10,6 +10,7 @@ import { OneFileComponent } from './demo/one-file/one-file.component';
 import { SelectorAttributeComponent } from './demo/selector-attribute/selector-attribute.component';
 import { SelectorClassComponent } from './demo/selector-class/selector-class.component';
 import { StringInterpolationComponent } from './demo/string-interpolation/string-interpolation.component';
+import { PropertyBindingComponent } from './demo/property-binding/property-binding.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { StringInterpolationComponent } from './demo/string-interpolation/string
     OneFileComponent,
     SelectorAttributeComponent,
     SelectorClassComponent,
-    StringInterpolationComponent
+    StringInterpolationComponent,
+    PropertyBindingComponent
   ],
   imports: [
     BrowserModule,
