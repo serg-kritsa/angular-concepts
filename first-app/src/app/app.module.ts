@@ -30,6 +30,12 @@ import { DirectivesNgcontentComponent } from './demo-v2/directives-ngcontent/dir
 import { InnerDirectivesNgcontentComponent } from './demo-v2/directives-ngcontent/inner/inner.component';
 import { DirectivesNgswitchComponent } from './demo-v2/directives-ngswitch/directives-ngswitch.component';
 
+import { Basic14Directive } from "./demo-v2/directives-attribute/basic-14-hidden.directive";
+import { Basic13Directive } from "./demo-v2/directives-attribute/basic-13.directive";
+import { Basic11Directive, Basic12Directive } from "./demo-v2/directives-attribute/basic-11.directive";
+import { Basic01Directive, Basic02Directive } from "./demo-v2/directives-attribute/basic-01.directive";
+import { AttributeDirectiveDemoComponent } from "./demo-v2/directives-attribute/demo-attribute-directive.component";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,7 +57,11 @@ import { DirectivesNgswitchComponent } from './demo-v2/directives-ngswitch/direc
     DirectivesOutputComponent, InnerDirectivesOutputComponent, InnerEmittedAliasEventComponent, 
     ViewEncapsulationComponent, InnerComponent, 
     TemplateLocalRefComponent, 
-    DirectivesNgcontentComponent, InnerDirectivesNgcontentComponent, DirectivesNgswitchComponent
+    DirectivesNgcontentComponent, InnerDirectivesNgcontentComponent, 
+    DirectivesNgswitchComponent,
+    Basic01Directive, Basic02Directive, Basic11Directive, Basic12Directive, Basic13Directive, Basic14Directive,
+    AttributeDirectiveDemoComponent
+    
   ],
   imports: [
     BrowserModule,
