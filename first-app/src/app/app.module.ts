@@ -17,6 +17,9 @@ import { DirectivesNgifElseComponent } from './demo/directives-ngif-else/directi
 import { DirectivesNgstyleComponent } from './demo/directives-ngstyle/directives-ngstyle.component';
 import { DirectivesNgclassComponent } from './demo/directives-ngclass/directives-ngclass.component';
 import { DirectivesNgforComponent } from './demo/directives-ngfor/directives-ngfor.component';
+import { DirectivesInputComponent }     from './demo-v2/directives-input/directives-input.component';
+import { InnerDirectivesInputComponent } from './demo-v2/directives-input/inner/inner.component';
+import { InnerAcceptsAliasPropComponent } from './demo-v2/directives-input/inner/inner-accepts-alias-prop.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +37,8 @@ import { DirectivesNgforComponent } from './demo/directives-ngfor/directives-ngf
     DirectivesNgifElseComponent,
     DirectivesNgstyleComponent,
     DirectivesNgclassComponent,
-    DirectivesNgforComponent
+    DirectivesNgforComponent,
+    DirectivesInputComponent, InnerDirectivesInputComponent, InnerAcceptsAliasPropComponent
   ],
   imports: [
     BrowserModule,
