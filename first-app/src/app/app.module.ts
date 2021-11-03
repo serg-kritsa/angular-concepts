@@ -26,6 +26,8 @@ import { InnerEmittedAliasEventComponent } from './demo-v2/directives-output/inn
 import { ViewEncapsulationComponent } from './demo-v2/view-encapsulation/view-encapsulation.component';
 import { InnerComponent } from './demo-v2/view-encapsulation/inner/inner.component';
 import { TemplateLocalRefComponent } from './demo-v2/template-local-ref/template-local-ref.component';
+import { DirectivesNgcontentComponent } from './demo-v2/directives-ngcontent/directives-ngcontent.component';
+import { InnerDirectivesNgcontentComponent } from './demo-v2/directives-ngcontent/inner/inner.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +49,8 @@ import { TemplateLocalRefComponent } from './demo-v2/template-local-ref/template
     DirectivesInputComponent, InnerDirectivesInputComponent, InnerAcceptsAliasPropComponent, 
     DirectivesOutputComponent, InnerDirectivesOutputComponent, InnerEmittedAliasEventComponent, 
     ViewEncapsulationComponent, InnerComponent, 
-    TemplateLocalRefComponent
+    TemplateLocalRefComponent, 
+    DirectivesNgcontentComponent, InnerDirectivesNgcontentComponent
   ],
   imports: [
     BrowserModule,
