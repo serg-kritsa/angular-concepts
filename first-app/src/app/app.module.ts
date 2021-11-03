@@ -9,6 +9,7 @@ import { StylesComponent } from './demo/styles/styles.component';
 import { OneFileComponent } from './demo/one-file/one-file.component';
 import { SelectorAttributeComponent } from './demo/selector-attribute/selector-attribute.component';
 import { SelectorClassComponent } from './demo/selector-class/selector-class.component';
+import { StringInterpolationComponent } from './demo/string-interpolation/string-interpolation.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { SelectorClassComponent } from './demo/selector-class/selector-class.com
     StylesComponent,
     OneFileComponent,
     SelectorAttributeComponent,
-    SelectorClassComponent
+    SelectorClassComponent,
+    StringInterpolationComponent
   ],
   imports: [
     BrowserModule,

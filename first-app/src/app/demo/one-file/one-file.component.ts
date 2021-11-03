@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
     <div app-selector-attribute></div>
     <div class="app-selector-class"></div>
     <p>Paragraph for inline style will be red/p>
+    <app-string-interpolation></app-string-interpolation>
   `,
   styles: ['p { color: red }']
 })
