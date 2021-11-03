@@ -11,6 +11,8 @@ import { SelectorAttributeComponent } from './demo/selector-attribute/selector-a
 import { SelectorClassComponent } from './demo/selector-class/selector-class.component';
 import { StringInterpolationComponent } from './demo/string-interpolation/string-interpolation.component';
 import { PropertyBindingComponent } from './demo/property-binding/property-binding.component';
+import { EventBindingComponent } from './demo/event-binding/event-binding.component';
+import { EventBindingV2Component } from './demo/event-binding-v2/event-binding-v2.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { PropertyBindingComponent } from './demo/property-binding/property-bindi
     SelectorAttributeComponent,
     SelectorClassComponent,
     StringInterpolationComponent,
-    PropertyBindingComponent
+    PropertyBindingComponent,
+    EventBindingComponent,
+    EventBindingV2Component
   ],
   imports: [
     BrowserModule,
