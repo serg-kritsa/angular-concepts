@@ -13,6 +13,8 @@ import { StringInterpolationComponent } from './demo/string-interpolation/string
 import { PropertyBindingComponent } from './demo/property-binding/property-binding.component';
 import { EventBindingComponent } from './demo/event-binding/event-binding.component';
 import { EventBindingV2Component } from './demo/event-binding-v2/event-binding-v2.component';
+import { DirectivesNgifComponent } from './demo/directives-ngif/directives-ngif.component';
+import { DirectivesNgifElseComponent } from './demo/directives-ngif-else/directives-ngif-else.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { EventBindingV2Component } from './demo/event-binding-v2/event-binding-v
     StringInterpolationComponent,
     PropertyBindingComponent,
     EventBindingComponent,
-    EventBindingV2Component
+    EventBindingV2Component,
+    DirectivesNgifComponent,
+    DirectivesNgifElseComponent
   ],
   imports: [
     BrowserModule,
