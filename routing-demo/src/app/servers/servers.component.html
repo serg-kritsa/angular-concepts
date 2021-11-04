@@ -1,7 +1,11 @@
 <div class="row">
   <div class="col-xs-12 col-sm-4">
     <div class="list-group">
+      <!-- /servers/3?allowEdit=1#loading -->
       <a
+        [routerLink]="['/servers', server.id]"
+        [queryParams]="{allowEdit: server.id === 3 ? '1' : '0'}"
+        fragment="loading"
         href="#"
         class="list-group-item"
         *ngFor="let server of servers">
