@@ -25,6 +25,8 @@ const appRoutes: Routes = [
     { path: ':id/edit', component: EditServerComponent }
   ] },
   { path: 'not-found', component: PageNotFoundComponent },
+  { path: '**', redirectTo: '/not-found' },
+  // NOTE!: { path: '', redirectTo: '/not-found' }, // will cause permanent redirect, to fix use { path: '', redirectTo: '/not-found', pathMatch: 'full' }
 ];
 
 @NgModule({
