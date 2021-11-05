@@ -39,4 +39,9 @@ export class AppComponent {
     
     console.log(this.signupForm.value);
   }
+  
+  resetFormHandler(){
+    this.signupForm.reset();
+  }
+
 }
