@@ -18,5 +18,9 @@ export class AppComponent {
     // form.dirty === entered value in control by user
     // form.touched === clicked in control by user
     console.log(form);
+
+    console.log(form.value.userData);          // {username, email}
+    console.log(form.controls.userData.value); // {username, email}
+    
   }
 }
