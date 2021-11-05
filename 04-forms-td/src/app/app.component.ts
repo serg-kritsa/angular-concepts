@@ -1,4 +1,5 @@
 import { Component, ElementRef } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +11,10 @@ export class AppComponent {
     const suggestedName = 'Superuser';
   }
 
-  onSubmitHandler(form: ElementRef){
+  onSubmitHandler(form: NgForm){
+    // form.value === entered values in controls by user
+    // form.dirty === entered value in control by user
+    // form.touched === clicked in control by user
     console.log(form);
   }
 }
