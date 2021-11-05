@@ -11,4 +11,12 @@ export class AuthService {
     );
     return promise;
   }
+
+  login() {
+    this.loggedIn = true;
+  }
+
+  logout() {
+    this.loggedIn = false;
+  }
 }
