@@ -27,6 +27,14 @@ export class AppComponent implements OnInit {
     this.usernameControl = this.signupForm.get('userData.username') as FormControl
     this.emailControl = this.signupForm.get('userData.email') as FormControl
     this.hobbyControls = (this.signupForm.get('hobbies') as FormArray).controls
+
+    // this.signupForm.valueChanges.subscribe(
+    //   (value) => console.log(value)
+    // );
+    // this.signupForm.statusChanges.subscribe(
+    //   (status) => console.log(status)
+    // );
+
   }
 
   onSubmitHandler(){
