@@ -28,7 +28,9 @@ export class AppComponent implements OnInit, OnDestroy {
     this.postService.createAndStorePost(postData.title, postData.content)
     // will be sent after subscription
     .subscribe(responseData => {
-      console.log(responseData);
+      console.log(responseData.body);
+      // console.log(responseData.headers);
+      // console.log(responseData.statusText);
     }, 
     error => this.postService.errorEmitter.next(error.message));
   }
@@ -40,7 +42,8 @@ export class AppComponent implements OnInit, OnDestroy {
 
   onClearPosts() {
     // Send Http request
-    this.postService.deletePosts().subscribe(_ => this.loadedPosts = [])
+    this.postService.deletePosts()
+    .subscribe(_ => this.loadedPosts = [])
   }
 
   private fetchPosts(){

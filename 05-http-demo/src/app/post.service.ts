@@ -1,7 +1,7 @@
-import { HttpClient, HttpHeaders, HttpParams } from "@angular/common/http";
+import { HttpClient, HttpEventType, HttpHeaders, HttpParams } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Subject, throwError } from "rxjs";
-import { catchError, map } from 'rxjs/operators';
+import { catchError, map, tap } from 'rxjs/operators';
 
 import { Post } from "./post.model";
 
@@ -18,7 +18,8 @@ export class PostService {
         // provided link
         //                                                                    collection json file
         'https://fir-app-99824-default-rtdb.europe-west1.firebasedatabase.app/posts.json',
-        postData
+        postData,
+        {observe: 'response'}
       )
   }
 
@@ -48,6 +49,15 @@ export class PostService {
   }
 
   deletePosts(){
-    return this.http.delete('https://fir-app-99824-default-rtdb.europe-west1.firebasedatabase.app/posts.json');
+    return this.http.delete(
+      'https://fir-app-99824-default-rtdb.europe-west1.firebasedatabase.app/posts.json',
+      {observe: 'events'}
+    )
+    .pipe(
+      tap(event => {
+        console.log(event)
+        if(event.type === HttpEventType.UploadProgress) console.log(event.loaded);
+      })
+    )
   }
 }
