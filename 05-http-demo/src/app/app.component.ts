@@ -58,7 +58,7 @@ export class AppComponent implements OnInit {
         })
       )// became { ...document_data, id: "key"}
       .subscribe(posts => {
-        // ...
+        this.loadedPosts = posts
         console.log(posts);
       });
   }
