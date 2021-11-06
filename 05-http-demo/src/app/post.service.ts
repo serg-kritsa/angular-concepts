@@ -40,4 +40,8 @@ export class PostService {
         })
       )
   }
+
+  deletePosts(){
+    return this.http.delete('https://fir-app-99824-default-rtdb.europe-west1.firebasedatabase.app/posts.json');
+  }
 }
