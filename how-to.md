@@ -28,3 +28,27 @@ r'Start in test mode' > b'Enable'
     ".write": "now < 1638738000000",  // 2021-12-6
   }
 }
+
+## Authentication 
+- 'Authentication'
+|Sign-in method| 
+Enable Email/Password
+
+- firebase auth rest api
+[https://firebase.google.com/docs/reference/rest/auth?hl=sr]
+[https://firebase.google.com/docs/reference/rest/auth?hl=sr#section-create-email-password]
+
+- firebase api key
+[https://console.firebase.google.com/project/fir-app-99824/settings/general]
+rightbar'Project Overview' >
+'Project Settings' > |General| > 'Your project' > 'Web API key'       _____________________________API_KEY_______________________________
+
+- css loading spinner
+[https://loading.io/css/]
+
+
+### example 
+curl 'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=[API_KEY]' \
+-H 'Content-Type: application/json' \
+--data-binary '{"email":"[user@example.com]","password":"[PASSWORD]","returnSecureToken":true}'
+
