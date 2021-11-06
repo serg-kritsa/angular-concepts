@@ -37,6 +37,7 @@ Enable Email/Password
 - firebase auth rest api
 [https://firebase.google.com/docs/reference/rest/auth?hl=sr]
 [https://firebase.google.com/docs/reference/rest/auth?hl=sr#section-create-email-password]
+[https://firebase.google.com/docs/reference/rest/auth?hl=sr#section-sign-in-email-password]
 
 - firebase api key
 [https://console.firebase.google.com/project/fir-app-99824/settings/general]
