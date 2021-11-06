@@ -52,6 +52,15 @@ export class AppComponent implements OnInit {
 
   onSubmitHandler(){
     console.log(this.signupForm);
+    // this.signupForm.reset();
+
+    // // not specified fields will be reset
+    // this.signupForm.reset({
+    //   userData: {
+    //     username: {value: 'name', disabled: true},
+    //   },
+    //   gender: 'male'
+    // });
   }
 
   onAddHobby() {
