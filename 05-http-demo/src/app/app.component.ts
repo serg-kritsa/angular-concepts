@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 
 import { Post } from "./post.model";
+import { PostService } from './post.service';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +14,7 @@ export class AppComponent implements OnInit {
   loadedPosts: Post[] = [];
   isFetching = false;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private postService: PostService) {}
 
   ngOnInit() {
     this.fetchPosts();
@@ -21,17 +22,7 @@ export class AppComponent implements OnInit {
 
   onCreatePost(postData: Post) {
     // Send Http request
-    this.http
-      .post<{name: string}>(
-        // provided link
-        //                                                                    collection json file
-        'https://fir-app-99824-default-rtdb.europe-west1.firebasedatabase.app/posts.json',
-        postData
-      )
-      // will be sent after subscription
-      .subscribe(responseData => {
-        console.log(responseData);
-      });
+    this.postService.createAndStorePost(postData.title, postData.content)
   }
 
   onFetchPosts() {
