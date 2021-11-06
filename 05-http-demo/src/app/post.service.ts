@@ -11,17 +11,14 @@ export class PostService {
 
   createAndStorePost(title: string, content: string){
     const postData: Post = {title, content}
-    this.http
+    return this.http
       .post<{name: string}>(
         // provided link
         //                                                                    collection json file
         'https://fir-app-99824-default-rtdb.europe-west1.firebasedatabase.app/posts.json',
         postData
       )
-      // will be sent after subscription
-      .subscribe(responseData => {
-        console.log(responseData);
-      });}
+  }
 
   fetchPosts(){
     return this.http

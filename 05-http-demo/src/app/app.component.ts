@@ -12,7 +12,7 @@ import { PostService } from './post.service';
 export class AppComponent implements OnInit {
   loadedPosts: Post[] = [];
   isFetching = false;
-  error = null
+  error = null;
   
   constructor(private http: HttpClient, private postService: PostService) {}
   
@@ -23,6 +23,10 @@ export class AppComponent implements OnInit {
   onCreatePost(postData: Post) {
     // Send Http request
     this.postService.createAndStorePost(postData.title, postData.content)
+    // will be sent after subscription
+    .subscribe(responseData => {
+      console.log(responseData);
+    });
   }
 
   onFetchPosts() {
@@ -40,12 +44,6 @@ export class AppComponent implements OnInit {
     this.postService.fetchPosts().subscribe(posts => {
       this.loadedPosts = posts;
       this.isFetching = false;
-    }, error => {
-      this.error = error.message
-      // this.error = error.name
-      // this.error = error.status
-      // this.error = error.statusText
-      // this.error = error.error
     });
   }
 }
