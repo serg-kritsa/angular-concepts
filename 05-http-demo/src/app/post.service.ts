@@ -51,7 +51,12 @@ export class PostService {
   deletePosts(){
     return this.http.delete(
       'https://fir-app-99824-default-rtdb.europe-west1.firebasedatabase.app/posts.json',
-      {observe: 'events'}
+      {
+        observe: 'events',
+        // responseType: 'json'
+        // responseType: 'blob'
+        // responseType: 'text'
+      }
     )
     .pipe(
       tap(event => {
