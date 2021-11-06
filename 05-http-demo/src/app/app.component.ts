@@ -11,6 +11,7 @@ import { Post } from "./post.model";
 })
 export class AppComponent implements OnInit {
   loadedPosts: Post[] = [];
+  isFetching = false;
 
   constructor(private http: HttpClient) {}
 
@@ -43,6 +44,7 @@ export class AppComponent implements OnInit {
   }
 
   private fetchPosts() {
+    this.isFetching = true;
     this.http
       .get<{ [key: string]: Post }>('https://fir-app-99824-default-rtdb.europe-west1.firebasedatabase.app/posts.json')
       // was {"key": { ...document data  }}
@@ -58,6 +60,7 @@ export class AppComponent implements OnInit {
         })
       )// became { ...document_data, id: "key"}
       .subscribe(posts => {
+        this.isFetching = false;
         this.loadedPosts = posts
         console.log(posts);
       });
