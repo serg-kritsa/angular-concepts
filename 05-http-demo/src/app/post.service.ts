@@ -1,5 +1,6 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
+import { map } from 'rxjs/operators';
 
 import { Post } from "./post.model";
 
@@ -22,5 +23,21 @@ export class PostService {
         console.log(responseData);
       });}
 
-  fetchPosts(){}
+  fetchPosts(){
+    return this.http
+      .get<{ [key: string]: Post }>('https://fir-app-99824-default-rtdb.europe-west1.firebasedatabase.app/posts.json')
+      // was {"key": { ...document data  }}
+      .pipe(
+        map(responseData => {
+          const postsArray: Post[] = [];
+          for (const key in responseData) {
+            if (responseData.hasOwnProperty(key)) {
+              postsArray.push({ ...responseData[key], id: key });
+            }
+          }
+          // became { ...document_data, id: "key"}
+          return postsArray;
+        })
+      )
+  }
 }
