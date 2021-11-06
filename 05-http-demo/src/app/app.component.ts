@@ -17,6 +17,7 @@ export class AppComponent implements OnInit {
   constructor(private http: HttpClient, private postService: PostService) {}
   
   ngOnInit() {
+    this.postService.errorEmitter.subscribe(errMsg => this.error = errMsg)
     this.fetchPosts();
   }
 
@@ -26,7 +27,8 @@ export class AppComponent implements OnInit {
     // will be sent after subscription
     .subscribe(responseData => {
       console.log(responseData);
-    });
+    }, 
+    error => this.postService.errorEmitter.next(error.message));
   }
 
   onFetchPosts() {
@@ -41,9 +43,12 @@ export class AppComponent implements OnInit {
 
   private fetchPosts(){
     this.isFetching = true;
-    this.postService.fetchPosts().subscribe(posts => {
+    this.postService.fetchPosts()
+    .subscribe(posts => {
       this.loadedPosts = posts;
       this.isFetching = false;
-    });
+    }, 
+    error => this.postService.errorEmitter.next(error.message)
+    );
   }
 }
