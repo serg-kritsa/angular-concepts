@@ -10,7 +10,10 @@
               id="username"
               formControlName="username"
               class="form-control">
-            <span *ngIf="!usernameControl.valid && usernameControl.touched" class="help-block">Please enter a valid username</span>
+            <div *ngIf="!usernameControl.valid && usernameControl.touched" class="help-block">
+              <span *ngIf="usernameControl.errors['nameIsForbidden']">This name is invalid!</span>
+              <span *ngIf="usernameControl.errors['required']">This field is required!</span>
+            </div>
           </div>
           <div class="form-group">
             <label for="email">email</label>
@@ -44,6 +47,9 @@
           </div>
         </div>
         {{signupForm.value | json}}
+        <br/>
+        {{signupForm.valid}}
+        <br/>
         <button class="btn btn-primary" type="submit" [disabled]="signupForm.untouched || signupForm.invalid">Submit</button>
       </form>
     </div>
