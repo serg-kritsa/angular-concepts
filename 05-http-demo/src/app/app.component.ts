@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -8,11 +9,23 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
   loadedPosts = [];
 
-  constructor() {}
+  constructor(private http: HttpClient) {}
 
   ngOnInit() {}
 
   onCreatePost(postData: { title: string; content: string }) {
+    // Send Http request
+    this.http
+      .post(
+        // provided link
+        //                                                                    collection json file
+        'https://fir-app-99824-default-rtdb.europe-west1.firebasedatabase.app/posts.json',
+        postData
+      )
+      // will be sent after subscription
+      .subscribe(responseData => {
+        console.log(responseData);
+      });
   }
 
   onFetchPosts() {
