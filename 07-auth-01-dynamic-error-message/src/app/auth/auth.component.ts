@@ -3,6 +3,7 @@ import {
   ComponentFactoryResolver,
   ViewChild,
   OnDestroy,
+  ViewContainerRef,
 } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -20,7 +21,8 @@ export class AuthComponent implements OnDestroy {
   isLoginMode = true;
   isLoading = false;
   error: string = null;
-  @ViewChild(PlaceholderDirective, { static: false }) alertHost: PlaceholderDirective;
+  @ViewChild('dynamicComponent', { read: ViewContainerRef }) alertHost;
+  // @ViewChild(PlaceholderDirective, { static: false }) alertHost: PlaceholderDirective;
 
   private closeSub: Subscription;
 
@@ -78,9 +80,12 @@ export class AuthComponent implements OnDestroy {
   }
 
   private showErrorAlert(message: string) {
-    // prepare ref
-    const hostViewContainerRef = this.alertHost.viewContainerRef;
+    // prepare ref w/o placeholder
+    const hostViewContainerRef = this.alertHost;
     hostViewContainerRef.clear();
+    // // prepare ref
+    // const hostViewContainerRef = this.alertHost.viewContainerRef;
+    // hostViewContainerRef.clear();
     
     // create dynamic component
     const alertCmpFactory = this.componentFactoryResolver.resolveComponentFactory(
