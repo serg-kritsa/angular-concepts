@@ -53,3 +53,15 @@ curl 'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=[API_KEY]' \
 -H 'Content-Type: application/json' \
 --data-binary '{"email":"[user@example.com]","password":"[PASSWORD]","returnSecureToken":true}'
 
+## RxJS
+[https://www.learnrxjs.io/learn-rxjs/subjects/behaviorsubject]
+Requires an initial value and emits the current value to new subscribers.
+
+[https://www.learnrxjs.io/learn-rxjs/operators/utility/do]
+Transparently perform actions or side-effects, such as logging.
+
+[https://www.learnrxjs.io/learn-rxjs/operators/transformation/exhaustmap]
+Map to inner observable, ignore other values until that observable completes.
+
+[https://www.learnrxjs.io/learn-rxjs/operators/filtering/take]
+Emit provided number of values before completing.
