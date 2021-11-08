@@ -80,3 +80,9 @@ Hosting URL: [...firebaseapp.com]
 
 ## Sync up
 injection place for new service is SharedModule.providers: [LoggingService]
+
+## ngRx overview
+list subscribed to state from store > 
+  dispatched action after button click > 
+    changed state by reducer that waits actions > 
+      shown new state in the list
