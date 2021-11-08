@@ -77,3 +77,6 @@ r'Hosting'
 ...index.html already exists. Overwrite? n
 - firebase deploy
 Hosting URL: [...firebaseapp.com]
+
+## Sync up
+injection place for new service is SharedModule.providers: [LoggingService]
