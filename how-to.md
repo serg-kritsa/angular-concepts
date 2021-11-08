@@ -65,3 +65,15 @@ Map to inner observable, ignore other values until that observable completes.
 
 [https://www.learnrxjs.io/learn-rxjs/operators/filtering/take]
 Emit provided number of values before completing.
+
+## hosting app steps
+- ng build --prod
+- npm i -g firebase-tools
+- firebase login
+- cd proj-folder && firebase init
+r'Hosting'
+...use as your public directory?='dist/[project_folder]'
+...as a single-page app...: y
+...index.html already exists. Overwrite? n
+- firebase deploy
+Hosting URL: [...firebaseapp.com]
