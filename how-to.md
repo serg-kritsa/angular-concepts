@@ -90,3 +90,14 @@ list subscribed to state from store >
 ## ngRx Effects
 npm i -D @ngrx/effects 
 
+
+import { interval, fromEvent } from 'rxjs';
+import { switchMap, mergeMap } from 'rxjs/operators';
+
+fromEvent(document, 'click')
+.pipe(
+  // restart counter on every click
+  mergeMap(() => interval(1000))
+  // switchMap(() => interval(1000))
+)
+.subscribe(console.log);
