@@ -86,3 +86,7 @@ list subscribed to state from store >
   dispatched action after button click > 
     changed state by reducer that waits actions > 
       shown new state in the list
+
+## ngRx Effects
+npm i -D @ngrx/effects 
+
