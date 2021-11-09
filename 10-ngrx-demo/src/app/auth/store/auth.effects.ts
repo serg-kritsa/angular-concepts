@@ -33,7 +33,17 @@ export class AuthEffects {
           }
         )
         .pipe(
-          map(_ => {}),
+          map(resData => {
+            const expirationDate = new Date(
+              new Date().getTime() + +resData.expiresIn * 1000
+            );
+            return new AuthActions.Login({
+              email: resData.email,
+              userId: resData.localId,
+              token: resData.idToken,
+              expirationDate: expirationDate
+            });
+          }),
         );
     })
   );
