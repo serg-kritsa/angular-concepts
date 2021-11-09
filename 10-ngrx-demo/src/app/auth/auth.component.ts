@@ -56,7 +56,7 @@ export class AuthComponent implements OnInit, OnDestroy {
     const email = form.value.email;
     const password = form.value.password;
 
-    let authObs: Observable<AuthResponseData>;
+    // let authObs: Observable<AuthResponseData>;
 
     this.isLoading = true;
 
@@ -66,22 +66,22 @@ export class AuthComponent implements OnInit, OnDestroy {
         new AuthActions.LoginStart({ email: email, password: password })
       );
     } else {
-      authObs = this.authService.signup(email, password);
+      // authObs = this.authService.signup(email, password);
     }
 
-    authObs.subscribe(
-      resData => {
-        console.log(resData);
-        this.isLoading = false;
-        this.router.navigate(['/recipes']);
-      },
-      errorMessage => {
-        console.log(errorMessage);
-        this.error = errorMessage;
-        this.showErrorAlert(errorMessage);
-        this.isLoading = false;
-      }
-    );
+    // authObs.subscribe(
+    //   resData => {
+    //     console.log(resData);
+    //     this.isLoading = false;
+    //     this.router.navigate(['/recipes']);
+    //   },
+    //   errorMessage => {
+    //     console.log(errorMessage);
+    //     this.error = errorMessage;
+    //     this.showErrorAlert(errorMessage);
+    //     this.isLoading = false;
+    //   }
+    // );
 
     form.reset();
   }
