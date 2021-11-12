@@ -16,13 +16,15 @@ export class RecipeEffects {
         'https://fir-app-99824-default-rtdb.europe-west1.firebasedatabase.app/recipes.json'
       );
     }),
-    map(recipes => {
-      return recipes.map(recipe => {
-        return {
-          ...recipe,
-          ingredients: recipe.ingredients ? recipe.ingredients : []
-        };
-      });
+    map(responseData => {
+      const recipesArray: Recipe[] = [];
+      for (const key in responseData) {
+        if (responseData.hasOwnProperty(key)) {
+          recipesArray.push({ ...responseData[key] });
+          // recipesArray.push({ ...responseData[key], id: key });
+        }
+      }
+      return recipesArray;
     }),
     map(recipes => {
       return new RecipesActions.SetRecipes(recipes);
