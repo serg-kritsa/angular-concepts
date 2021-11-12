@@ -19,12 +19,12 @@ const routes: Routes = [
       {
         path: ':id',
         component: RecipeDetailComponent,
-        resolve: [RecipesResolverService]
+        resolve: [RecipesResolverService] // for direct link
       },
       {
         path: ':id/edit',
         component: RecipeEditComponent,
-        resolve: [RecipesResolverService]
+        resolve: [RecipesResolverService] // for direct link
       }
     ]
   }
